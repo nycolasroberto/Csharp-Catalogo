@@ -482,19 +482,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nycck\\.nuget\\packages\\": {}
+    "C:\\Users\\irene\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nycck\\CatalogoGames.API\\CatalogoGames.API.csproj",
+      "projectUniqueName": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API\\CatalogoGames.API.csproj",
       "projectName": "CatalogoGames.API",
-      "projectPath": "C:\\Users\\Nycck\\CatalogoGames.API\\CatalogoGames.API.csproj",
-      "packagesPath": "C:\\Users\\Nycck\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nycck\\CatalogoGames.API\\obj\\",
+      "projectPath": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API\\CatalogoGames.API.csproj",
+      "packagesPath": "C:\\Users\\irene\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nycck\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\irene\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
