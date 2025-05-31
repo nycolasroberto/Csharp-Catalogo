@@ -487,11 +487,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API\\CatalogoGames.API.csproj",
+      "projectUniqueName": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API.csproj",
       "projectName": "CatalogoGames.API",
-      "projectPath": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API\\CatalogoGames.API.csproj",
+      "projectPath": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API.csproj",
       "packagesPath": "C:\\Users\\irene\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\CatalogoGames.API\\obj\\",
+      "outputPath": "C:\\Users\\irene\\Downloads\\T.I ber\\CatalogoGames.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\irene\\AppData\\Roaming\\NuGet\\NuGet.Config"
