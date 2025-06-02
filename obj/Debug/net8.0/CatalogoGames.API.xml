@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CatalogoGames.API</name>
+    </assembly>
+    <members>
+        <member name="T:CatalogoGames.API.Data.CatalogoDbContext">
+            <summary>
+            Contexto do banco de dados para o catálogo de games
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Data.CatalogoDbContext.Jogos">
+            <summary>
+            Conjunto de dados para jogos
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Data.CatalogoDbContext.Categorias">
+            <summary>
+            Conjunto de dados para categorias
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Data.CatalogoDbContext.Desenvolvedores">
+            <summary>
+            Conjunto de dados para desenvolvedores
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Data.CatalogoDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configura o modelo de dados
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Data.CatalogoDbContext.SeedData(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Popula o banco de dados com dados iniciais
+            </summary>
+        </member>
+        <member name="T:CatalogoGames.API.Modelos.Categoria">
+            <summary>
+            Representa uma categoria de jogos no catálogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Categoria.Id">
+            <summary>
+            Identificador único da categoria
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Categoria.Nome">
+            <summary>
+            Nome da categoria
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Categoria.Descricao">
+            <summary>
+            Descrição da categoria
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Categoria.Jogos">
+            <summary>
+            Jogos associados a esta categoria
+            </summary>
+        </member>
+        <member name="T:CatalogoGames.API.Modelos.Desenvolvedor">
+            <summary>
+            Representa um desenvolvedor de jogos no catálogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Desenvolvedor.Id">
+            <summary>
+            Identificador único do desenvolvedor
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Desenvolvedor.Nome">
+            <summary>
+            Nome do desenvolvedor
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Desenvolvedor.Pais">
+            <summary>
+            País de origem do desenvolvedor
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Desenvolvedor.Website">
+            <summary>
+            Site oficial do desenvolvedor
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Desenvolvedor.AnoFundacao">
+            <summary>
+            Ano de fundação do desenvolvedor
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Desenvolvedor.Jogos">
+            <summary>
+            Jogos desenvolvidos por este desenvolvedor
+            </summary>
+        </member>
+        <member name="T:CatalogoGames.API.Modelos.Jogo">
+            <summary>
+            Representa um jogo no catálogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.Id">
+            <summary>
+            Identificador único do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.Titulo">
+            <summary>
+            Título do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.Descricao">
+            <summary>
+            Descrição do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.DataLancamento">
+            <summary>
+            Data de lançamento do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.UrlImagem">
+            <summary>
+            URL da imagem de capa do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.Preco">
+            <summary>
+            Preço do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.CategoriaId">
+            <summary>
+            Identificador da categoria do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.Categoria">
+            <summary>
+            Categoria do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.DesenvolvedorId">
+            <summary>
+            Identificador do desenvolvedor do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.Desenvolvedor">
+            <summary>
+            Desenvolvedor do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.ClassificacaoEtaria">
+            <summary>
+            Classificação etária do jogo
+            </summary>
+        </member>
+        <member name="P:CatalogoGames.API.Modelos.Jogo.Plataformas">
+            <summary>
+            Plataformas disponíveis para o jogo
+            </summary>
+        </member>
+        <member name="T:CatalogoGames.API.Repositorios.CategoriaRepositorio">
+            <summary>
+            Implementação do repositório de categorias
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.CategoriaRepositorio.#ctor(CatalogoGames.API.Data.CatalogoDbContext)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="context">Contexto do banco de dados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.CategoriaRepositorio.ObterTodasAsync">
+            <summary>
+            Obtém todas as categorias
+            </summary>
+            <returns>Lista de categorias</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.CategoriaRepositorio.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Obtém uma categoria pelo ID
+            </summary>
+            <param name="id">ID da categoria</param>
+            <returns>Categoria encontrada ou null</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.CategoriaRepositorio.AdicionarAsync(CatalogoGames.API.Modelos.Categoria)">
+            <summary>
+            Adiciona uma nova categoria
+            </summary>
+            <param name="categoria">Categoria a ser adicionada</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.CategoriaRepositorio.AtualizarAsync(CatalogoGames.API.Modelos.Categoria)">
+            <summary>
+            Atualiza uma categoria existente
+            </summary>
+            <param name="categoria">Categoria com os dados atualizados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.CategoriaRepositorio.RemoverAsync(System.Int32)">
+            <summary>
+            Remove uma categoria pelo ID
+            </summary>
+            <param name="id">ID da categoria a ser removida</param>
+        </member>
+        <member name="T:CatalogoGames.API.Repositorios.DesenvolvedorRepositorio">
+            <summary>
+            Implementação do repositório de desenvolvedores
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.DesenvolvedorRepositorio.#ctor(CatalogoGames.API.Data.CatalogoDbContext)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="context">Contexto do banco de dados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.DesenvolvedorRepositorio.ObterTodosAsync">
+            <summary>
+            Obtém todos os desenvolvedores
+            </summary>
+            <returns>Lista de desenvolvedores</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.DesenvolvedorRepositorio.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Obtém um desenvolvedor pelo ID
+            </summary>
+            <param name="id">ID do desenvolvedor</param>
+            <returns>Desenvolvedor encontrado ou null</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.DesenvolvedorRepositorio.AdicionarAsync(CatalogoGames.API.Modelos.Desenvolvedor)">
+            <summary>
+            Adiciona um novo desenvolvedor
+            </summary>
+            <param name="desenvolvedor">Desenvolvedor a ser adicionado</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.DesenvolvedorRepositorio.AtualizarAsync(CatalogoGames.API.Modelos.Desenvolvedor)">
+            <summary>
+            Atualiza um desenvolvedor existente
+            </summary>
+            <param name="desenvolvedor">Desenvolvedor com os dados atualizados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.DesenvolvedorRepositorio.RemoverAsync(System.Int32)">
+            <summary>
+            Remove um desenvolvedor pelo ID
+            </summary>
+            <param name="id">ID do desenvolvedor a ser removido</param>
+        </member>
+        <member name="T:CatalogoGames.API.Repositorios.ICategoriaRepositorio">
+            <summary>
+            Interface para operações de repositório de categorias
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.ICategoriaRepositorio.ObterTodasAsync">
+            <summary>
+            Obtém todas as categorias
+            </summary>
+            <returns>Lista de categorias</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.ICategoriaRepositorio.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Obtém uma categoria pelo ID
+            </summary>
+            <param name="id">ID da categoria</param>
+            <returns>Categoria encontrada ou null</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.ICategoriaRepositorio.AdicionarAsync(CatalogoGames.API.Modelos.Categoria)">
+            <summary>
+            Adiciona uma nova categoria
+            </summary>
+            <param name="categoria">Categoria a ser adicionada</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.ICategoriaRepositorio.AtualizarAsync(CatalogoGames.API.Modelos.Categoria)">
+            <summary>
+            Atualiza uma categoria existente
+            </summary>
+            <param name="categoria">Categoria com os dados atualizados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.ICategoriaRepositorio.RemoverAsync(System.Int32)">
+            <summary>
+            Remove uma categoria pelo ID
+            </summary>
+            <param name="id">ID da categoria a ser removida</param>
+        </member>
+        <member name="T:CatalogoGames.API.Repositorios.IDesenvolvedorRepositorio">
+            <summary>
+            Interface para operações de repositório de desenvolvedores
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IDesenvolvedorRepositorio.ObterTodosAsync">
+            <summary>
+            Obtém todos os desenvolvedores
+            </summary>
+            <returns>Lista de desenvolvedores</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IDesenvolvedorRepositorio.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Obtém um desenvolvedor pelo ID
+            </summary>
+            <param name="id">ID do desenvolvedor</param>
+            <returns>Desenvolvedor encontrado ou null</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IDesenvolvedorRepositorio.AdicionarAsync(CatalogoGames.API.Modelos.Desenvolvedor)">
+            <summary>
+            Adiciona um novo desenvolvedor
+            </summary>
+            <param name="desenvolvedor">Desenvolvedor a ser adicionado</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IDesenvolvedorRepositorio.AtualizarAsync(CatalogoGames.API.Modelos.Desenvolvedor)">
+            <summary>
+            Atualiza um desenvolvedor existente
+            </summary>
+            <param name="desenvolvedor">Desenvolvedor com os dados atualizados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IDesenvolvedorRepositorio.RemoverAsync(System.Int32)">
+            <summary>
+            Remove um desenvolvedor pelo ID
+            </summary>
+            <param name="id">ID do desenvolvedor a ser removido</param>
+        </member>
+        <member name="T:CatalogoGames.API.Repositorios.IJogoRepositorio">
+            <summary>
+            Interface para operações de repositório de jogos
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IJogoRepositorio.ObterTodosAsync">
+            <summary>
+            Obtém todos os jogos
+            </summary>
+            <returns>Lista de jogos</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IJogoRepositorio.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Obtém um jogo pelo ID
+            </summary>
+            <param name="id">ID do jogo</param>
+            <returns>Jogo encontrado ou null</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IJogoRepositorio.AdicionarAsync(CatalogoGames.API.Modelos.Jogo)">
+            <summary>
+            Adiciona um novo jogo
+            </summary>
+            <param name="jogo">Jogo a ser adicionado</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IJogoRepositorio.AtualizarAsync(CatalogoGames.API.Modelos.Jogo)">
+            <summary>
+            Atualiza um jogo existente
+            </summary>
+            <param name="jogo">Jogo com os dados atualizados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.IJogoRepositorio.RemoverAsync(System.Int32)">
+            <summary>
+            Remove um jogo pelo ID
+            </summary>
+            <param name="id">ID do jogo a ser removido</param>
+        </member>
+        <member name="T:CatalogoGames.API.Repositorios.JogoRepositorio">
+            <summary>
+            Implementação do repositório de jogos
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.JogoRepositorio.#ctor(CatalogoGames.API.Data.CatalogoDbContext)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="context">Contexto do banco de dados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.JogoRepositorio.ObterTodosAsync">
+            <summary>
+            Obtém todos os jogos
+            </summary>
+            <returns>Lista de jogos</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.JogoRepositorio.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Obtém um jogo pelo ID
+            </summary>
+            <param name="id">ID do jogo</param>
+            <returns>Jogo encontrado ou null</returns>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.JogoRepositorio.AdicionarAsync(CatalogoGames.API.Modelos.Jogo)">
+            <summary>
+            Adiciona um novo jogo
+            </summary>
+            <param name="jogo">Jogo a ser adicionado</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.JogoRepositorio.AtualizarAsync(CatalogoGames.API.Modelos.Jogo)">
+            <summary>
+            Atualiza um jogo existente
+            </summary>
+            <param name="jogo">Jogo com os dados atualizados</param>
+        </member>
+        <member name="M:CatalogoGames.API.Repositorios.JogoRepositorio.RemoverAsync(System.Int32)">
+            <summary>
+            Remove um jogo pelo ID
+            </summary>
+            <param name="id">ID do jogo a ser removido</param>
+        </member>
+        <member name="T:CatalogoGames.API.Validacoes.CategoriaValidator">
+            <summary>
+            Validador para a entidade Categoria
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Validacoes.CategoriaValidator.#ctor">
+            <summary>
+            Configura as regras de validação para Categoria
+            </summary>
+        </member>
+        <member name="T:CatalogoGames.API.Validacoes.DesenvolvedorValidator">
+            <summary>
+            Validador para a entidade Desenvolvedor
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Validacoes.DesenvolvedorValidator.#ctor">
+            <summary>
+            Configura as regras de validação para Desenvolvedor
+            </summary>
+        </member>
+        <member name="T:CatalogoGames.API.Validacoes.JogoValidator">
+            <summary>
+            Validador para a entidade Jogo
+            </summary>
+        </member>
+        <member name="M:CatalogoGames.API.Validacoes.JogoValidator.#ctor">
+            <summary>
+            Configura as regras de validação para Jogo
+            </summary>
+        </member>
+    </members>
+</doc>
