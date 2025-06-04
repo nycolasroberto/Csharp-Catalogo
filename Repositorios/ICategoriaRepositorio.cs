@@ -3,39 +3,39 @@ using CatalogoGames.API.Modelos;
 namespace CatalogoGames.API.Repositorios
 {
     
-    /// Interface para operações de repositório de categorias
+    // Interface para operações de repositório de categorias
     
     public interface ICategoriaRepositorio
     {
         
-        /// Obtém todas as categorias
+        // Obtém todas as categorias
         
-        /// <returns>Lista de categorias</returns>
+        //Lista de categorias
         Task<IEnumerable<Categoria>> ObterTodasAsync();
 
         
-        /// Obtém uma categoria pelo ID
+        // Obtém uma categoria pelo ID
         
-        /// <param name="id">ID da categoria</param>
-        /// <returns>Categoria encontrada ou null</returns>
+        //ID da categoria
+        //Categoria encontrada ou null
         Task<Categoria?> ObterPorIdAsync(int id);
 
         
-        /// Adiciona uma nova categoria
+        // Adiciona uma nova categoria
         
-        /// <param name="categoria">Categoria a ser adicionada</param>
+        //Categoria a ser adicionada
         Task AdicionarAsync(Categoria categoria);
 
         
-        /// Atualiza uma categoria existente
+        // Atualiza uma categoria existente
         
-        /// <param name="categoria">Categoria com os dados atualizados</param>
+        //Categoria com os dados atualizados
         Task AtualizarAsync(Categoria categoria);
 
         
-        /// Remove uma categoria pelo ID
+        // Remove uma categoria pelo ID
         
-        /// <param name="id">ID da categoria a ser removida</param>
+        //ID da categoria a ser removida
         Task RemoverAsync(int id);
     }
 }

@@ -3,39 +3,39 @@ using CatalogoGames.API.Modelos;
 namespace CatalogoGames.API.Repositorios
 {
     
-    /// Interface para operações de repositório de desenvolvedores
+    // Interface para operações de repositório de desenvolvedores
     
     public interface IDesenvolvedorRepositorio
     {
         
-        /// Obtém todos os desenvolvedores
+        // Obtém todos os desenvolvedores
         
-        /// <returns>Lista de desenvolvedores</returns>
+        //Lista de desenvolvedores
         Task<IEnumerable<Desenvolvedor>> ObterTodosAsync();
 
         
-        /// Obtém um desenvolvedor pelo ID
+        // Obtém um desenvolvedor pelo ID
         
-        /// <param name="id">ID do desenvolvedor</param>
-        /// <returns>Desenvolvedor encontrado ou null</returns>
+        //ID do desenvolvedor
+        //Desenvolvedor encontrado ou null
         Task<Desenvolvedor?> ObterPorIdAsync(int id);
 
         
-        /// Adiciona um novo desenvolvedor
+        // Adiciona um novo desenvolvedor
         
-        /// <param name="desenvolvedor">Desenvolvedor a ser adicionado</param>
+        //Desenvolvedor a ser adicionado
         Task AdicionarAsync(Desenvolvedor desenvolvedor);
 
         
-        /// Atualiza um desenvolvedor existente
+        // Atualiza um desenvolvedor existente
         
-        /// <param name="desenvolvedor">Desenvolvedor com os dados atualizados</param>
+        //Desenvolvedor com os dados atualizados
         Task AtualizarAsync(Desenvolvedor desenvolvedor);
 
         
-        /// Remove um desenvolvedor pelo ID
+        // Remove um desenvolvedor pelo ID
         
-        /// <param name="id">ID do desenvolvedor a ser removido</param>
+        //ID do desenvolvedor a ser removido
         Task RemoverAsync(int id);
     }
 }

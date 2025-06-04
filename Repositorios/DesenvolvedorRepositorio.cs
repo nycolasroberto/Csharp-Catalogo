@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CatalogoGames.API.Repositorios
 {
     
-    /// Implementação do repositório de desenvolvedores
+    // Implementação do repositório de desenvolvedores
     
     public class DesenvolvedorRepositorio : IDesenvolvedorRepositorio
     {
@@ -13,34 +13,34 @@ namespace CatalogoGames.API.Repositorios
 
         
         
-        /// <param name="context">Contexto do banco de dados</param>
+        //Contexto do banco de dados
         public DesenvolvedorRepositorio(CatalogoDbContext context)
         {
             _context = context;
         }
 
         
-        /// Obtém todos os desenvolvedores
+        // Obtém todos os desenvolvedores
         
-        /// <returns>Lista de desenvolvedores</returns>
+        //Lista de desenvolvedores
         public async Task<IEnumerable<Desenvolvedor>> ObterTodosAsync()
         {
             return await _context.Desenvolvedores.ToListAsync();
         }
         
-        /// Obtém um desenvolvedor pelo ID
+        // Obtém um desenvolvedor pelo ID
         
-        /// <param name="id">ID do desenvolvedor</param>
-        /// <returns>Desenvolvedor encontrado ou null</returns>
+        //ID do desenvolvedor
+        //Desenvolvedor encontrado ou null
         public async Task<Desenvolvedor?> ObterPorIdAsync(int id)
         {
             return await _context.Desenvolvedores.FindAsync(id);
         }
 
         
-        /// Adiciona um novo desenvolvedor
+        // Adiciona um novo desenvolvedor
         
-        /// <param name="desenvolvedor">Desenvolvedor a ser adicionado</param>
+        //Desenvolvedor a ser adicionado
         public async Task AdicionarAsync(Desenvolvedor desenvolvedor)
         {
             await _context.Desenvolvedores.AddAsync(desenvolvedor);
@@ -48,9 +48,9 @@ namespace CatalogoGames.API.Repositorios
         }
 
         
-        /// Atualiza um desenvolvedor existente
+        // Atualiza um desenvolvedor existente
         
-        /// <param name="desenvolvedor">Desenvolvedor com os dados atualizados</param>
+        //Desenvolvedor com os dados atualizados
         public async Task AtualizarAsync(Desenvolvedor desenvolvedor)
         {
             _context.Desenvolvedores.Update(desenvolvedor);
@@ -58,9 +58,9 @@ namespace CatalogoGames.API.Repositorios
         }
 
         
-        /// Remove um desenvolvedor pelo ID
+        // Remove um desenvolvedor pelo ID
         
-        /// <param name="id">ID do desenvolvedor a ser removido</param>
+        //ID do desenvolvedor a ser removido
         public async Task RemoverAsync(int id)
         {
             var desenvolvedor = await _context.Desenvolvedores.FindAsync(id);

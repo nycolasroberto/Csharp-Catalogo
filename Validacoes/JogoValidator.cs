@@ -4,12 +4,12 @@ using FluentValidation;
 namespace CatalogoGames.API.Validacoes
 {
     
-    /// Validador para a entidade Jogo
+    // Validador para a entidade Jogo
     
     public class JogoValidator : AbstractValidator<Jogo>
     {
-        
-        /// Configura as regras de validação para Jogo
+    
+        // Configura as regras de validação para Jogo
         
         public JogoValidator()
         {

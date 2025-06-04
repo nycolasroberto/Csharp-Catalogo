@@ -3,34 +3,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CatalogoGames.API.Data
 {
-    /// <summary>
     /// Contexto do banco de dados para o catálogo de games
-    /// </summary>
     public class CatalogoDbContext : DbContext
     {
         public CatalogoDbContext(DbContextOptions<CatalogoDbContext> options) : base(options)
         {
         }
 
-        /// <summary>
-        /// Conjunto de dados para jogos
-        /// </summary>
-        public DbSet<Jogo> Jogos => Set<Jogo>();
+            // Conjunto de dados para jogos
+            public DbSet<Jogo> Jogos => Set<Jogo>();
 
-        /// <summary>
-        /// Conjunto de dados para categorias
-        /// </summary>
-        public DbSet<Categoria> Categorias => Set<Categoria>();
+            // Conjunto de dados para categorias
+            public DbSet<Categoria> Categorias => Set<Categoria>();
 
-        /// <summary>
-        /// Conjunto de dados para desenvolvedores
-        /// </summary>
-        public DbSet<Desenvolvedor> Desenvolvedores => Set<Desenvolvedor>();
+            // Conjunto de dados para desenvolvedores
+            public DbSet<Desenvolvedor> Desenvolvedores => Set<Desenvolvedor>();
 
-        /// <summary>
-        /// Configura o modelo de dados
-        /// </summary>
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+            // Configura o modelo de dados
+            protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
@@ -79,10 +69,8 @@ namespace CatalogoGames.API.Data
             SeedData(modelBuilder);
         }
 
-        /// <summary>
-        /// Popula o banco de dados com dados iniciais
-        /// </summary>
-        private void SeedData(ModelBuilder modelBuilder)
+            // Popula o banco de dados com dados iniciais
+            private void SeedData(ModelBuilder modelBuilder)
         {
             // Categorias
             modelBuilder.Entity<Categoria>().HasData(

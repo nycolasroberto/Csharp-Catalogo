@@ -5,44 +5,43 @@ using Microsoft.EntityFrameworkCore;
 namespace CatalogoGames.API.Repositorios
 {
     
-    /// Implementação do repositório de categorias
+    // Implementação do repositório de categorias
     
     public class CategoriaRepositorio : ICategoriaRepositorio
     {
         private readonly CatalogoDbContext _context;
 
         
-        /// Construtor
         
-        /// <param name="context">Contexto do banco de dados</param>
+        //Contexto do banco de dados
         public CategoriaRepositorio(CatalogoDbContext context)
         {
             _context = context;
         }
 
         
-        /// Obtém todas as categorias
+        // Obtém todas as categorias
         
-        /// <returns>Lista de categorias</returns>
+        //Lista de categorias
         public async Task<IEnumerable<Categoria>> ObterTodasAsync()
         {
             return await _context.Categorias.ToListAsync();
         }
 
         
-        /// Obtém uma categoria pelo ID
+        // Obtém uma categoria pelo ID
         
-        /// <param name="id">ID da categoria</param>
-        /// <returns>Categoria encontrada ou null</returns>
+        // da categoria
+        //Categoria encontrada ou null
         public async Task<Categoria?> ObterPorIdAsync(int id)
         {
             return await _context.Categorias.FindAsync(id);
         }
 
         
-        /// Adiciona uma nova categoria
+        // Adiciona uma nova categoria
         
-        /// <param name="categoria">Categoria a ser adicionada</param>
+        //Categoria a ser adicionada
         public async Task AdicionarAsync(Categoria categoria)
         {
             await _context.Categorias.AddAsync(categoria);
@@ -50,9 +49,9 @@ namespace CatalogoGames.API.Repositorios
         }
 
         
-        /// Atualiza uma categoria existente
+        // Atualiza uma categoria existente
         
-        /// <param name="categoria">Categoria com os dados atualizados</param>
+        //Categoria com os dados atualizados
         public async Task AtualizarAsync(Categoria categoria)
         {
             _context.Categorias.Update(categoria);
@@ -60,9 +59,9 @@ namespace CatalogoGames.API.Repositorios
         }
 
         
-        /// Remove uma categoria pelo ID
+        // Remove uma categoria pelo ID
         
-        /// <param name="id">ID da categoria a ser removida</param>
+        //ID da categoria a ser removida
         public async Task RemoverAsync(int id)
         {
             var categoria = await _context.Categorias.FindAsync(id);
